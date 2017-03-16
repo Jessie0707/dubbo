@@ -1,4 +1,5 @@
 FROM openjdk:8-jre
+RUN mvn package
 VOLUME /tmp
 COPY target/*.jar app.jar
 RUN sh -c 'touch /app.jar'
